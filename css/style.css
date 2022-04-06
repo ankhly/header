@@ -701,7 +701,7 @@ body.ie ._ibg img {
 }
 
 .search-header__search {
-  background: url("../img/ico/_search.svg") 50% 50%/70% no-repeat;
+  background: url("../img/icons/search.svg") 50% 50%/70% no-repeat;
   height: 100%;
   padding: 0px 20px;
   background-size: 24px;
