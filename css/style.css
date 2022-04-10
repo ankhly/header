@@ -162,23 +162,6 @@ body {
   color: #000;
 }
 
-body._lock {
-  overflow: hidden;
-}
-
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .container {
   max-width: 1310px;
   margin: 0 auto;
@@ -229,7 +212,7 @@ body.ie ._ibg img {
 }
 
 :root {
-  --more-width: 25px;
+  --more-width: 55px;
   --more-margin: 3px;
   --menu-margin: 3px;
 }
@@ -322,7 +305,7 @@ body.ie ._ibg img {
       -ms-flex-align: center;
           align-items: center;
   font-size: 13px;
-  line-height: 120%;
+  line-height: 200%;
   font-weight: 600;
   color: #111;
   white-space: nowrap;
@@ -342,35 +325,6 @@ body.ie ._ibg img {
   margin: 0px 0px 0px 1px;
 }
 
-.phones-top__more {
-  position: absolute;
-  top: 100%;
-  left: 0px;
-  width: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #ffffff;
-  z-index: 3;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  display: none;
-}
-
-.phones-top__more i {
-  background: url("../img/icons/Telegram.svg") 0 0 no-repeat;
-  width: 15px;
-  height: 15px;
-  margin: 0px 0px 0px 7px;
-}
-
 .phones-top:hover .phones-top__more {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,7 +338,7 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5px 0px;
+  padding: 10px 0px;
   font-size: 13px;
   line-height: 120%;
   font-weight: 600;
@@ -517,7 +471,20 @@ body.ie ._ibg img {
 
 .menu__item {
   position: relative;
-  padding: 0px 25px 0px 0px;
+  padding: 25px 25px 25px 0px;
+}
+
+.menu__item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #9b0a0a;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .menu__link {
@@ -532,20 +499,6 @@ body.ie ._ibg img {
   color: #111;
   position: relative;
   height: 100%;
-  padding: 25px 0px 25px 0px;
-}
-
-.menu__link::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #9b0a0a;
-  -webkit-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
 }
 
 .menu__link_arrow::after {
@@ -554,15 +507,18 @@ body.ie ._ibg img {
 
 .menu__sub-list {
   position: absolute;
-  top: 100%;
+  top: calc(100% - 2px);
   right: 0;
-  min-width: 180px;
-  max-height: 300px;
-  overflow: auto;
+  min-width: 220px;
   padding: 0px 20px;
   z-index: 8;
   background-color: #ffffff;
-  border-top: 2px solid #9b0a0a;
+  border-top: 3px solid #9b0a0a;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .menu__sub-item {
@@ -581,6 +537,11 @@ body.ie ._ibg img {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.menu__item_list:hover .menu__sub-list {
+  opacity: 1;
+  visibility: visible;
 }
 
 .sub-menu {
@@ -612,8 +573,8 @@ body.ie ._ibg img {
 
 .menu-more svg {
   display: block;
-  width: 70%;
-  height: 70%;
+  width: 40%;
+  height: 40%;
   -o-object-fit: cover;
      object-fit: cover;
   fill: #333;
@@ -622,15 +583,12 @@ body.ie ._ibg img {
 
 .menu-sub {
   position: absolute;
-  top: 90%;
+  top: calc(100% - 6px);
   right: 0;
   min-width: 180px;
   padding: 10px 20px;
-  background-color: #ecebeb;
+  background-color: #ffffff;
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   z-index: 20;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -661,9 +619,13 @@ body.ie ._ibg img {
   padding: 0px 0px 0px 0px;
 }
 
+.menu-sub .menu__item::before {
+  display: none;
+}
+
 .menu-more:hover .menu-sub {
   height: auto;
-  border-top: 2px solid #9b0a0a;
+  border-top: 3px solid #9b0a0a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,6 +776,38 @@ body.ie ._ibg img {
           flex: 1 1 auto;
 }
 
+@media (min-width: 479.98px) {
+  .phones-top__more {
+    position: absolute;
+    top: 100%;
+    left: -5%;
+    width: 110%;
+    padding: 0px 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #ffffff;
+    z-index: 3;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+
+  .phones-top__more i {
+    background: url("../img/icons/Telegram.svg") 0 0 no-repeat;
+    width: 15px;
+    height: 15px;
+    margin: 0px 0px 0px 7px;
+  }
+}
+
 @media (max-width: 1322px) {
   ._container {
     max-width: 970px;
@@ -876,29 +870,32 @@ body.ie ._ibg img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 5px;
   }
 
   .logo-header {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-    margin: 0px 0px 5px 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 60%;
+            flex: 0 1 60%;
   }
 
   .logo-header__icon {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0px 0px 0px 0px;
   }
 
   .logo-header__icon span {
     display: block;
     margin: 0px 0px 0px 0px;
+    text-align: center;
   }
 
   .menu {
@@ -916,13 +913,17 @@ body.ie ._ibg img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    overflow: auto;
     display: none;
     padding: 30px 0px 30px 0px;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #f1efef;
   }
 
   .menu__body._active {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .menu__list {
@@ -930,13 +931,13 @@ body.ie ._ibg img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    overflow: auto;
     margin-right: 0px;
-    gap: 15px;
+    gap: 18px;
   }
 
   .menu__item {
     padding: 0px 0px 0px 0px;
+    width: 100%;
   }
 
   .menu__link {
@@ -947,30 +948,49 @@ body.ie ._ibg img {
             justify-content: center;
   }
 
-  .menu__link_arrow._active {
-    padding: 0px 0px 20px 0px;
-  }
-
   .menu__sub-list {
     position: relative;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .menu__sub-item {
     text-align: center;
+    padding: 12px 0px;
   }
 
   .menu__sub-link {
     font-size: 16px;
   }
 
+  .menu__item_list:hover .menu__sub-list {
+    margin: 20px 0px 0px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .menu-more {
     display: none;
+  }
+
+  .menu-sub {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .actions-header {
+    gap: 25px;
   }
 
   .icon-menu {
     display: block;
     position: absolute;
-    top: 70px;
+    top: 50px;
     right: 15px;
     width: 30px;
     height: 18px;
@@ -1039,24 +1059,72 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 479.98px) {
+  .phones-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 35px;
+  }
+
   .phones-top:not(:last-child) {
     margin: 0px 0px 0px 0px;
+  }
+
+  .phones-top__main {
+    font-size: 14px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    line-height: 100%;
   }
 
   .phones-top__main::after {
     display: none;
   }
 
-  .phones-top__main span {
-    display: none;
-  }
-
   .phones-top__main::before {
-    font-size: 14px;
+    display: none;
   }
 
   .more-phones__phone {
-    display: none;
+    padding: 0px 0px 10px 0px;
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  .more-phones__phone:not(:last-child) {
+    border-bottom: none;
+  }
+
+  .more-phones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .bottom-header__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .menu__body {
+    width: 100%;
+  }
+
+  .search-header {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
   }
 
   .actions-header {
@@ -1081,8 +1149,8 @@ body.ie ._ibg img {
     color: #9b0a0a;
   }
 
-  .menu__link:hover::before {
-    width: 100%;
+  .menu__item:hover::before {
+    width: calc(100% - 25px);
   }
 
   .menu__sub-link:hover {
