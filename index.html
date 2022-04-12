@@ -4,7 +4,7 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220411030037">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220413022757">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
@@ -19,27 +19,63 @@
 			<div class="top-header__body">
 				<div class="top-header__left left-top">
 					<div class="left-top__local">
-						<i class="_icon-location"></i>
+						<i class="fa fa-map-marker"></i>
 						<span>Работаем по Могилеву и области</span>
 
 					</div>
 					<div class="left-top__time">
-						<i class="_icon-watch"></i>
+						<i class="fa fa-clock-o"></i>
 						<span>Пн-Пт.: 10.00 - 20.00 Сб.: 12.00 - 15.00 Вс.: выходной</span>
 
 					</div>
 				</div>
 				<div class="top-header__right right-top">
-					<div data-da=".phone-formobile,479.98" class="right-top__phones phones-top">
-						<a href="whatsapp://send?phone=+375331234567" class="phones-top__main _icon-phone"><span>+375 (33)
-								123-45-67</span></a>
+					<div class="right-top__phones phones-top">
+						<i class="fa-solid fa-caret-down"></i>
+						<a href="tel:+375331234567" class="phones-top__main"><span>+375 (33)
+								123-45-67</span>
+							<i class="fa-solid fa-phone"></i>
+						</a>
+
 						<div class="phones-top__more more-phones">
-							<a href="tg://resolve?domain=+375297197881" class="more-phones__phone"><span>+375 (29)
-									987-65-43</span>
-								<i class="icon"></i>
-							</a>
-							<a href="viber://chat?number=+375330000000" class="more-phones__phone"><span>+375 (33)
-									000-00-00</span></a>
+							<div class="more-phones__phone">
+								<a href="tel:+375297197881">+375 (29)
+									987-65-43</a>
+
+
+								<a href="viber://chat?number=375297197881" class="phone-icon">
+									<i class="fa-brands fa-viber"></i>
+								</a>
+								<a href="https://t.me/example_org" class="phone-icon">
+									<i class="fa-brands fa-telegram"></i>
+								</a>
+
+								<a href="https://wa.me/375297197881" class="phone-icon">
+									<i class="fa-brands fa-whatsapp"></i>
+								</a>
+
+							</div>
+
+							<div class="more-phones__phone">
+								<a href="tel:+375330000000">+375 (33)
+									000-00-00</a>
+
+
+								<a href="viber://chat?number=375330000000" class="phone-icon">
+									<i class="fa-brands fa-viber"></i>
+								</a>
+								<a href="https://t.me/example_org" class="phone-icon">
+									<i class="fa-brands fa-telegram"></i>
+								</a>
+
+								<a href="https://wa.me/375330000000" class="phone-icon">
+									<i class="fa-brands fa-whatsapp"></i>
+
+								</a>
+
+							</div>
+
+
 
 						</div>
 					</div>
@@ -47,7 +83,9 @@
 						<a href="" class="call-top__item">Заказать звонок</a>
 					</div>
 					<div class="right-top__cabinet cabinet-top">
-						<a href="" class="cabinet-top__item _icon-lock">Личный кабинет</a>
+						<a href="" class="cabinet-top__item">Личный кабинет
+							<i class="fa-solid fa-unlock"></i>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -81,6 +119,7 @@
 							</li>
 							<li class="menu__item">
 								<a href="" class="menu__link">Новости</a>
+
 							</li>
 
 							<li class="menu__item menu__item_list">
@@ -106,6 +145,7 @@
 									</li>
 								</ul>
 							</li>
+
 							<li class="menu__item">
 								<a href="" class="menu__link">Отзывы</a>
 							</li>
@@ -124,30 +164,16 @@
 							<li class="menu__item">
 								<a href="" class="menu__link">Пункт меню</a>
 							</li>
-						</ul>
-						<div class="menu-more">
-							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 426.667 426.667">
-								<g>
-									<g>
-										<circle cx="42.667" cy="213.333" r="42.667" />
-									</g>
-								</g>
-								<g>
-									<g>
-										<circle cx="213.333" cy="213.333" r="42.667" />
-									</g>
-								</g>
-								<g>
-									<g>
-										<circle cx="384" cy="213.333" r="42.667" />
-									</g>
-								</g>
-							</svg>
-							<ul class="menu-sub sub-menu">
+							<li class="menu-more">
+								<span><i class="fa fa-ellipsis-h"></i></span>
+								<ul class="menu-sub sub-menu">
 
-							</ul>
-						</div>
+								</ul>
+							</li>
+						</ul>
+
+
+
 					</nav>
 				</div>
 
@@ -165,7 +191,22 @@
 					<a href="" class="actions-header__tune _icon-tune"><span>0</span></a>
 					<a href="" class="actions-header__star _icon-star"><span>0</span></a>
 				</div>
-				<div class="phone-formobile"></div>
+				<div class="phone-formobile">
+					<div class="phone-formobile__body">
+						<div class="phone-formobile__column">
+							<a href="tel:+375331234567">+375 (33)
+								123-45-67
+							</a>
+						</div>
+						<div class="phone-formobile__column">
+							<a href="tel:+375297197881">+375 (29)
+								987-65-43</a>
+							<a href="tel:+375330000000">+375 (33)
+								000-00-00</a>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</div>
@@ -179,8 +220,8 @@
 	</div>
 </footer>
 	</div>
-	
-	<script src="js/app.min.js?_v=20220411030037"></script>
+	<script src="js/app.min.js?_v=20220413022757"></script>
+<script src="https://kit.fontawesome.com/7f7759dfb0.js?_v=20220413022757" crossorigin="anonymous"></script>
 </body>
 
 </html>
