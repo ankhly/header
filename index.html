@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
- <head>
+<head>
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220413212700">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220416205431">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
@@ -31,10 +31,11 @@
 				</div>
 				<div class="top-header__right right-top">
 					<div class="right-top__phones phones-top">
-						<i class="fa-solid fa-caret-down"></i>
-						<a href="tel:+375331234567" class="phones-top__main"><span>+375 (33)
-								123-45-67</span>
+						<a href="tel:+375331234567" class="phones-top__main">
 							<i class="fa-solid fa-phone"></i>
+							<span>+375 (33) 123-45-67
+								<i class="fa-solid fa-caret-down"></i>
+							</span>
 						</a>
 
 						<div class="phones-top__more more-phones">
@@ -44,14 +45,14 @@
 
 
 								<a href="viber://chat?number=375297197881" class="phone-icon">
-									<i class="fa-brands fa-viber"></i>
+									<i class="phone-icon__viber"></i>
 								</a>
 								<a href="https://t.me/example_org" class="phone-icon">
-									<i class="fa-brands fa-telegram"></i>
+									<i class="phone-icon__telegram"></i>
 								</a>
 
 								<a href="https://wa.me/375297197881" class="phone-icon">
-									<i class="fa-brands fa-whatsapp"></i>
+									<i class="phone-icon__whatsapp"></i>
 								</a>
 
 							</div>
@@ -62,14 +63,14 @@
 
 
 								<a href="viber://chat?number=375330000000" class="phone-icon">
-									<i class="fa-brands fa-viber"></i>
+									<i class="phone-icon__viber"></i>
 								</a>
 								<a href="https://t.me/example_org" class="phone-icon">
-									<i class="fa-brands fa-telegram"></i>
+									<i class="phone-icon__telegram"></i>
 								</a>
 
 								<a href="https://wa.me/375330000000" class="phone-icon">
-									<i class="fa-brands fa-whatsapp"></i>
+									<i class="phone-icon__whatsapp"></i>
 
 								</a>
 
@@ -111,7 +112,7 @@
 							<li class="menu__item">
 								<a href="" class="menu__link">Главная</a>
 							</li>
-							<li class="menu__item">
+							<li class="menu__item menu__item_catalog">
 								<a href="" class="menu__link">Каталог</a>
 							</li>
 							<li class="menu__item">
@@ -171,18 +172,110 @@
 								</ul>
 							</li>
 						</ul>
+						<div class="menu__catalog catalog">
+							<div class="catalog__body">
+								<div class="catalog__item item-catalog">
+									<a href="" class="item-catalog__image _ibg">
+										<picture><source srcset="img/catalog/nophoto.webp" type="image/webp"><img src="img/catalog/nophoto.png" alt=""></picture>
+									</a>
+									<div class="item-catalog__links">
+										<a href="" class="item-catalog__link item-catalog__link_main">Автоэлектроника</a>
+										<a href="" class="item-catalog__link">Автозвук</a>
+										<a href="" class="item-catalog__link">Радар-детекторы</a>
+										<a href="" class="item-catalog__link">Видеорегистраторы</a>
+										<a href="" class="item-catalog__link">GPS-навигаторы</a>
+									</div>
+								</div>
+								<div class="catalog__item item-catalog">
+									<a href="" class="item-catalog__image _ibg">
+										<picture><source srcset="img/catalog/17.webp" type="image/webp"><img src="img/catalog/17.jpg" alt=""></picture>
+									</a>
+									<div class="item-catalog__links">
+										<a href="" class="item-catalog__link item-catalog__link_main">Бытовая техника</a>
+										<a href="" class="item-catalog__link"> Холодильники</a>
+										<a href="" class="item-catalog__link">Микроволновые печи</a>
+										<a href="" class="item-catalog__link"> Водонагреватели</a>
 
+									</div>
+								</div>
+								<div class="catalog__item item-catalog">
+									<a href="" class="item-catalog__image _ibg">
+										<picture><source srcset="img/catalog/23.webp" type="image/webp"><img src="img/catalog/23.jpg" alt=""></picture>
+									</a>
+									<div class="item-catalog__links">
+										<a href="" class="item-catalog__link item-catalog__link_main">Фото и видео</a>
+									</div>
+								</div>
+								<div class="catalog__item item-catalog">
+									<a href="" class="item-catalog__image _ibg">
+										<picture><source srcset="img/catalog/24.webp" type="image/webp"><img src="img/catalog/24.jpg" alt=""></picture>
+									</a>
+									<div class="item-catalog__links">
+										<a href="" class="item-catalog__link item-catalog__link_main">Электроинструмент</a>
+									</div>
+								</div>
+								<div class="catalog__item item-catalog">
+									<a href="" class="item-catalog__image _ibg">
+										<picture><source srcset="img/catalog/21.webp" type="image/webp"><img src="img/catalog/21.jpg" alt=""></picture>
+									</a>
+									<div class="item-catalog__links">
+										<a href="" class="item-catalog__link item-catalog__link_main">Сантехника</a>
 
+									</div>
+								</div>
+								<div class="catalog__item item-catalog">
+									<a href="" class="item-catalog__image _ibg">
+										<picture><source srcset="img/catalog/22.webp" type="image/webp"><img src="img/catalog/22.jpg" alt=""></picture>
+									</a>
+									<div class="item-catalog__links">
+										<a href="" class="item-catalog__link item-catalog__link_main">Строительные материалы</a>
 
+									</div>
+								</div>
+								<div class="catalog__item item-catalog">
+									<a href="" class="item-catalog__image _ibg">
+										<picture><source srcset="img/catalog/20.webp" type="image/webp"><img src="img/catalog/20.jpg" alt=""></picture>
+									</a>
+									<div class="item-catalog__links">
+										<a href="" class="item-catalog__link item-catalog__link_main"> Напольные покрытия</a>
+									</div>
+								</div>
+								<div class="catalog__item item-catalog">
+									<a href="" class="item-catalog__image _ibg">
+										<picture><source srcset="img/catalog/26.webp" type="image/webp"><img src="img/catalog/26.jpg" alt=""></picture>
+									</a>
+									<div class="item-catalog__links">
+										<a href="" class="item-catalog__link item-catalog__link_main">Спортивные товары</a>
+									</div>
+								</div>
+								<div class="catalog__item item-catalog">
+									<a href="" class="item-catalog__image _ibg">
+										<picture><source srcset="img/catalog/25.webp" type="image/webp"><img src="img/catalog/25.jpg" alt=""></picture>
+									</a>
+									<div class="item-catalog__links">
+										<a href="" class="item-catalog__link item-catalog__link_main">Косметика</a>
+
+									</div>
+								</div>
+								<div class="catalog__item item-catalog">
+									<a href="" class="item-catalog__image _ibg">
+										<picture><source srcset="img/catalog/53.webp" type="image/webp"><img src="img/catalog/53.jpg" alt=""></picture>
+									</a>
+									<div class="item-catalog__links">
+										<a href="" class="item-catalog__link item-catalog__link_main">Садовая техника</a>
+										<a href="" class="item-catalog__link">Газонокосилки</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</nav>
 				</div>
 
 				<div class="bottom-header__search search-header">
 					<form action="" class="search-header__item">
-						<input autocomplete="off" type="text" name="form[]" placeholder="Поиск по сайту"
-							class="search-header__input">
+						<input type="text" name="form[]" placeholder="Поиск по сайту" class="search-header__input">
 
-						<input autocomplete="off" type="submit" name="form[]" value="" class="search-header__search">
+						<input type="submit" name="form[]" value="" class="search-header__search">
 
 					</form>
 				</div>
@@ -220,8 +313,8 @@
 	</div>
 </footer>
 	</div>
-	<script src="js/app.min.js?_v=20220413212700"></script>
-<script src="https://kit.fontawesome.com/7f7759dfb0.js?_v=20220413212700" crossorigin="anonymous"></script>
+	<script src="js/script.js?_v=20220416205431"></script>
+<script src="https://kit.fontawesome.com/7f7759dfb0.js?_v=20220416205431" crossorigin="anonymous"></script>
 </body>
 
 </html>
