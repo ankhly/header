@@ -905,8 +905,8 @@ body.ie ._ibg img {
 
 .catalog {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 82px;
+  left: 0%;
   width: 100%;
   background-color: white;
   z-index: 20;
