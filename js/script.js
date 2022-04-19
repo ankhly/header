@@ -71,6 +71,75 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //=====================
+
+
+//let _slideUp = (target, duration = 500) => {
+//	if (!target.classList.contains('_slide')) {
+//		target.classList.add('_slide');
+//		target.style.transitionProperty = 'height, margin, padding';
+//		target.style.transitionDuration = duration + 'ms';
+//		target.style.height = target.offsetHeight + 'px';
+//		target.offsetHeight;
+//		target.style.overflow = 'hidden';
+//		target.style.height = 0;
+//		target.style.paddingTop = 0;
+//		target.style.paddingBottom = 0;
+//		target.style.marginTop = 0;
+//		target.style.marginBottom = 0;
+//		window.setTimeout(() => {
+//			target.hidden = true;
+//			target.style.removeProperty('height');
+//			target.style.removeProperty('padding-top');
+//			target.style.removeProperty('padding-bottom');
+//			target.style.removeProperty('margin-top');
+//			target.style.removeProperty('margin-bottom');
+//			target.style.removeProperty('overflow');
+//			target.style.removeProperty('transition-duration');
+//			target.style.removeProperty('transition-property');
+//			target.classList.remove('_slide');
+//		}, duration);
+//	}
+//}
+let _slideDown = (target, duration = 500) => {
+	if (!target.classList.contains('_slide')) {
+		target.classList.add('_slide');
+		if (target.hidden) {
+			target.hidden = false;
+		}
+		let height = target.offsetHeight;
+		target.style.overflow = 'hidden';
+		target.style.height = 0;
+		target.style.paddingTop = 0;
+		target.style.paddingBottom = 0;
+		target.style.marginTop = 0;
+		target.style.marginBottom = 0;
+		target.offsetHeight;
+		target.style.transitionProperty = "height, margin, padding";
+		target.style.transitionDuration = duration + 'ms';
+		target.style.height = height + 'px';
+		target.style.removeProperty('padding-top');
+		target.style.removeProperty('padding-bottom');
+		target.style.removeProperty('margin-top');
+		target.style.removeProperty('margin-bottom');
+		window.setTimeout(() => {
+			target.style.removeProperty('height');
+			target.style.removeProperty('overflow');
+			target.style.removeProperty('transition-duration');
+			target.style.removeProperty('transition-property');
+			target.classList.remove('_slide');
+		}, duration);
+	}
+}
+//let _slideToggle = (target, duration = 500) => {
+//	if (target.hidden) {
+//		return _slideDown(target, duration);
+//	} else {
+//		return _slideUp(target, duration);
+//	}
+//}
+
+
+
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
 if (iconMenu) {
@@ -79,9 +148,16 @@ if (iconMenu) {
 		iconMenu.classList.toggle('_active');
 		menuBody.classList.toggle('_active');
 
+
+		_slideDown(menuBody);
 	});
 
+
+
 }
+
+
+
 
 //==================
 
@@ -97,26 +173,37 @@ ibg();
 
 //============
 
-const menuCatalog = document.querySelector('.menu__item_catalog');
-const catalog = document.querySelector('.catalog');
+const menuCatalogs = document.querySelectorAll('.menu__item_catalog, .menu__item_catalog1');
+const catalogs = document.querySelectorAll('.catalog, .catalog1');
 
 
-menuCatalog.addEventListener("mouseenter", function (e) {
-	catalog.classList.add('active');
-});
+for (let index = 0; index < menuCatalogs.length; index++) {
+	//const menuCatalog = menuCatalogs[index];
 
-catalog.addEventListener("mouseenter", function (e) {
-	catalog.classList.add('active');
-});
+	for (let index = 0; index < catalogs.length; index++) {
+		const catalog = catalogs[index];
 
-menuCatalog.addEventListener("mouseleave", function (e) {
-	catalog.classList.remove('active');
-});
 
-catalog.addEventListener("mouseleave", function (e) {
-	catalog.classList.remove('active');
-});
 
+		menuCatalogs[index].addEventListener("mouseenter", function (e) {
+			catalog.classList.add('active');
+		});
+
+
+		catalog.addEventListener("mouseenter", function (e) {
+			catalog.classList.add('active');
+		});
+
+
+		menuCatalogs[index].addEventListener("mouseleave", function (e) {
+			catalog.classList.remove('active');
+		});
+
+		catalog.addEventListener("mouseleave", function (e) {
+			catalog.classList.remove('active');
+		});
+	}
+}
 
 //============
 
