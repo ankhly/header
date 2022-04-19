@@ -713,6 +713,10 @@ body.ie ._ibg img {
   padding: 0px 5%;
 }
 
+.menu-sub .menu__item:not(:last-child) {
+  border-bottom: 1px solid #e8e8e8;
+}
+
 .menu-sub .menu__item::before {
   display: none;
 }
