@@ -347,7 +347,7 @@ body.ie ._ibg img {
 .more-phones {
   position: absolute;
   top: 100%;
-  left: -33%;
+  left: -10px;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -363,7 +363,7 @@ body.ie ._ibg img {
   z-index: 3;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  padding: 10px 15px;
+  padding: 5px 25px;
 }
 
 .more-phones__phone {
@@ -376,12 +376,23 @@ body.ie ._ibg img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px 0px;
-  gap: 5px;
+  padding: 8px 0px;
 }
 
 .more-phones__phone:not(:last-child) {
   border-bottom: 1px solid #e8e8e8;
+}
+
+.more-phones__phone i {
+  display: none;
+}
+
+.more-phones__phone i:not(:last-child) {
+  margin: 0px 5px 0px 0px;
+}
+
+.more-phones__phone span {
+  margin: 0px 5px 0px 0px;
 }
 
 .more-phones__phone a {
@@ -392,6 +403,7 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   font-size: 13px;
   line-height: 120%;
   font-weight: 600;
@@ -611,7 +623,7 @@ body.ie ._ibg img {
 }
 
 .menu__sub-item {
-  padding: 8px 0px;
+  padding: 0px 5%;
 }
 
 .menu__sub-item:not(:last-child) {
@@ -619,7 +631,8 @@ body.ie ._ibg img {
 }
 
 .menu__sub-link {
-  padding: 5px 5px;
+  display: block;
+  padding: 13px 5%;
   width: 100%;
   font-size: 12px;
   font-weight: 600;
@@ -664,7 +677,7 @@ body.ie ._ibg img {
   top: calc(100% - 4px);
   right: 0;
   min-width: 180px;
-  padding: 10px 20px;
+  padding: 0px 10px;
   background-color: #ffffff;
   display: none;
   z-index: 20;
@@ -675,7 +688,9 @@ body.ie ._ibg img {
 }
 
 .menu-sub .menu__link {
-  padding: 5px 0px;
+  display: block;
+  width: 100%;
+  padding: 13px 5%;
   background: none;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -695,7 +710,7 @@ body.ie ._ibg img {
 }
 
 .menu-sub .menu__item {
-  padding: 0px 0px 0px 0px;
+  padding: 0px 5%;
 }
 
 .menu-sub .menu__item::before {
