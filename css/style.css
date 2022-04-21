@@ -218,7 +218,7 @@ input::-ms-clear {
 .more-phones {
   position: absolute;
   top: 100%;
-  left: -65px;
+  left: -9px;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
