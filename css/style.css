@@ -435,7 +435,7 @@ a:hover {
 .menu__sub-list {
   position: absolute;
   top: calc(100% - 3px);
-  right: 0;
+  right: 15px;
   min-width: 220px;
   padding: 0px 10px;
   z-index: 8;
@@ -492,7 +492,7 @@ a:hover {
 .menu-sub {
   position: absolute;
   top: calc(100% - 3px);
-  right: 0;
+  right: 10px;
   min-width: 180px;
   padding: 0px 10px;
   background-color: #ffffff;
@@ -930,6 +930,7 @@ a:hover {
 
   .menu__sub-list {
     position: relative;
+    right: 0;
     display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
